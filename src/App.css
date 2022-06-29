@@ -9,3 +9,26 @@
   width: 80%;
   margin-top: 20px;
 }
+
+#movie-display-div {
+  border: 1px solid blue;
+  width: 90%;
+  height: 500px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#movie-display-div > img {
+  border: 1px solid red;
+  width: 25%;
+  height: 90%;
+}
+
+#movie-display-div > div {
+  border: 1px solid green;
+  width: 70%;
+  height: 90%;
+}

@@ -26,6 +26,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Movie app</h1>
       <input
         type="text"
         placeholder="Press enter to search movie..."
@@ -33,6 +34,10 @@ function App() {
         onKeyPress={(event) => handlesearch(event.key)}
         id="search-input"
       />
+      <div id="movie-display-div">
+        <img src="" alt="" />
+        <div></div>
+      </div>
     </div>
   );
 }
