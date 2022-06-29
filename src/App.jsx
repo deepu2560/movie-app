@@ -28,9 +28,10 @@ function App() {
     <div className="App">
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Press enter to search movie..."
         onChange={(event) => handleinput(event.target)}
         onKeyPress={(event) => handlesearch(event.key)}
+        id="search-input"
       />
     </div>
   );
