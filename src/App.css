@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  color: #073944;
 }
 
 #search-input {
@@ -8,10 +9,21 @@
   padding: 8px 26px;
   width: 80%;
   margin-top: 20px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: #073944;
+}
+
+#search-input::placeholder {
+  color: #073944;
+}
+
+#search-input:active {
+  border: 1px solid #39a2db;
 }
 
 #movie-display-div {
-  border: 1px solid blue;
   width: 90%;
   height: 500px;
   margin: auto;
@@ -19,6 +31,9 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  background-color: #39a2db;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 30px;
 }
 
 #movie-display-div > img {
