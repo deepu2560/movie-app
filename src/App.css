@@ -7,10 +7,10 @@
   font-size: larger;
   font-weight: bolder;
   padding: 8px 26px;
-  width: 80%;
+  width: 60%;
   margin-top: 20px;
   background-color: #ffffff;
-  border: 1px solid transparent;
+  border: 1px solid #39a2db;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   color: #073944;
 }
@@ -24,26 +24,25 @@
 }
 
 #movie-display-div {
-  width: 90%;
+  width: 95%;
   height: 500px;
   margin: auto;
   margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 10px;
   background-color: #39a2db;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 30px;
-}
-
-#movie-display-div > img {
-  border: 1px solid red;
-  width: 25%;
-  height: 90%;
+  padding: 10px;
+  overflow-y: scroll;
 }
 
 #movie-display-div > div {
   border: 1px solid green;
-  width: 70%;
-  height: 90%;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
 }
