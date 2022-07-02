@@ -96,10 +96,25 @@ function App() {
             <br />
             <br />
           </p>
-          <button>GitHub</button>
+          <button
+            onClick={() => {
+              window.open("https://github.com/Deepu2560", "_blank");
+            }}
+          >
+            GitHub
+          </button>
           <br />
           <br />
-          <button>LinkedIn</button>
+          <button
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/in/deepanshu-gulia/",
+                "_blank",
+              );
+            }}
+          >
+            LinkedIn
+          </button>
         </div>
       )}
     </div>
