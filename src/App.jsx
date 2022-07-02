@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
+import { SearchPage } from "./Components/Pages/Search";
 
 function App() {
-  const [search, setsearch] = useState("spiderman");
+  const [search, setsearch] = useState("");
   const [page, setpage] = useState(1);
   const [totalPage, settotalPage] = useState(2);
 
@@ -12,16 +13,17 @@ function App() {
   }
 
   useEffect(() => {
-    axios
-      .get(
-        `https://api.themoviedb.org/3/search/movie?api_key=66783459cacfad7e27abfa85c92c7992&query=${search}&page=${page}`,
-      )
-      .then((res) => {
-        const { results, total_pages } = res.data;
-        setdata((prev) => results);
-        settotalPage(() => total_pages);
-      });
-    console.log(page);
+    if (search.length > 2) {
+      axios
+        .get(
+          `https://api.themoviedb.org/3/search/movie?api_key=66783459cacfad7e27abfa85c92c7992&query=${search}&page=${page}`,
+        )
+        .then((res) => {
+          const { results, total_pages } = res.data;
+          setdata((prev) => results);
+          settotalPage(() => total_pages);
+        });
+    }
   }, [search, page]);
 
   const [data, setdata] = useState([
@@ -53,40 +55,33 @@ function App() {
         onChange={(event) => handleinput(event.target)}
         id="search-input"
       />
-      <div id="movie-display-div">
-        {data.map((elem) =>
-          elem.backdrop_path != null ? (
-            <div onClick={() => console.log(elem.id)} key={elem.id}>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${elem.poster_path}`}
-                alt=""
-              />
+      {search ? (
+        <div>
+          <div id="movie-display-page-changer">
+            <div id="page-changer-button">
+              <button
+                onClick={() => {
+                  if (page > 1) {
+                    setpage((prev) => prev - 1);
+                  }
+                }}
+              >
+                Previous
+              </button>
+              <button
+                onClick={() => {
+                  if (page < totalPage) {
+                    setpage((prev) => prev + 1);
+                  }
+                }}
+              >
+                Next
+              </button>
             </div>
-          ) : null,
-        )}
-      </div>
-      <div id="movie-display-page-changer">
-        <div id="page-changer-button">
-          <button
-            onClick={() => {
-              if (page > 1) {
-                setpage((prev) => prev - 1);
-              }
-            }}
-          >
-            Previous
-          </button>
-          <button
-            onClick={() => {
-              if (page < totalPage) {
-                setpage((prev) => prev + 1);
-              }
-            }}
-          >
-            Next
-          </button>
+          </div>
+          <SearchPage posters={data} />
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }
