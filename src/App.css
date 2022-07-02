@@ -97,12 +97,15 @@
 }
 
 #home-page-description-div {
-  border: 1px solid blue;
+  border-radius: 20px;
   width: 80%;
   margin: auto;
   padding: 20px;
   text-align: center;
   margin-top: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 #home-page-description-div > button {
@@ -118,4 +121,45 @@
 #home-page-description-div > button:hover {
   background-color: #42b4f1;
   cursor: pointer;
+}
+
+#searched-movie-details-main-div {
+  width: 90%;
+  height: 395px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#searched-movie-details-main-div > img {
+  height: 95%;
+  width: 40%;
+}
+
+#searched-movie-details-main-div > div {
+  height: 100%;
+  width: 50%;
+  color: #2f3640;
+}
+
+#searched-movie-details-main-div > div > p {
+  text-align: left;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 820px) {
+  #searched-movie-details-main-div {
+    flex-direction: column;
+    height: max-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #searched-movie-details-main-div > div {
+    width: 90%;
+    color: #2f3640;
+  }
 }

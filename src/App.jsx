@@ -46,6 +46,8 @@ function App() {
     },
   ]);
 
+  console.clear();
+
   return (
     <div className="App">
       <h1>MovieDB</h1>
@@ -91,8 +93,8 @@ function App() {
             and search again to get details of other movie.
             <br />
             <br />
-            <strong>Tech Stack :- </strong> React | HTML | CSS | Javascript |
-            Nodejs
+            <strong>Tech Stack :- </strong> Reactjs | Axios | HTML | CSS |
+            Javascript | Nodejs
             <br />
             <br />
           </p>
