@@ -95,3 +95,27 @@
   padding: 10px 20px;
   border-radius: 10px;
 }
+
+#home-page-description-div {
+  border: 1px solid blue;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#home-page-description-div > button {
+  color: #073944;
+  font-size: larger;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 2px solid #2f3640;
+}
+
+#home-page-description-div > button:hover {
+  background-color: #42b4f1;
+  cursor: pointer;
+}

@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Movie app</h1>
+      <h1>MovieDB</h1>
       <input
         type="text"
         placeholder="Search movie here..."
@@ -81,7 +81,27 @@ function App() {
           </div>
           <SearchPage posters={data} />
         </div>
-      ) : null}
+      ) : (
+        <div id="home-page-description-div">
+          <h1>Hello Friends</h1>
+          <p>
+            This is a solo project (Movie app). In this app you have to search
+            for movie and then you will see multiple results. After that when
+            you click on any one movie poster you will see result of that movie
+            and search again to get details of other movie.
+            <br />
+            <br />
+            <strong>Tech Stack :- </strong> React | HTML | CSS | Javascript |
+            Nodejs
+            <br />
+            <br />
+          </p>
+          <button>GitHub</button>
+          <br />
+          <br />
+          <button>LinkedIn</button>
+        </div>
+      )}
     </div>
   );
 }
